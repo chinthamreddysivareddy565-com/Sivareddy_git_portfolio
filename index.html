@@ -1,30 +1,651 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Siva Reddy | Data Analyst Portfolio</title>
 <style>
-:root{--bg:#070a09;--panel:#0d120f;--panel2:#111a14;--green:#b5ff4d;--muted:#9aa69c;--white:#f3f7f1;--line:rgba(181,255,77,.16)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 70% 10%,rgba(92,148,43,.12),transparent 35%),radial-gradient(ellipse at 5% 55%,rgba(35,112,73,.10),transparent 35%),var(--bg);color:var(--white);font-family:Inter,Segoe UI,Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 88%);z-index:-1}
-.container{width:min(1120px,90%);margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(7,10,9,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}.nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;letter-spacing:-.5px}.logo span{color:var(--green)}nav{display:flex;gap:28px}nav a{color:#b9c4bb;text-decoration:none;font-size:13px;transition:.2s}nav a:hover{color:var(--green)}.pill{border:1px solid var(--line);border-radius:99px;padding:10px 15px;color:var(--green);font-size:12px;text-decoration:none}
-.hero{min-height:690px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:48px;padding:70px 0 90px}.eyebrow{color:var(--green);font-size:13px;letter-spacing:2.5px;text-transform:uppercase}.hero h1{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-4px;margin:20px 0}.hero h1 span{color:var(--green)}.hero p{max-width:560px;color:#a7b3aa;line-height:1.8;font-size:16px}.buttons{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}.btn{padding:13px 19px;border-radius:8px;font-weight:650;font-size:13px;text-decoration:none;transition:.25s}.primary{background:var(--green);color:#081006}.secondary{border:1px solid rgba(255,255,255,.13);color:var(--white)}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(181,255,77,.12)}.hero-card{position:relative;border:1px solid var(--line);background:linear-gradient(150deg,rgba(181,255,77,.08),rgba(15,23,17,.88) 50%);border-radius:24px;min-height:410px;display:grid;place-items:center;overflow:hidden}.hero-card:before,.hero-card:after{content:"";position:absolute;border:1px solid rgba(181,255,77,.16);border-radius:50%;width:290px;height:290px}.hero-card:after{width:370px;height:370px;border-color:rgba(181,255,77,.08)}.avatar{z-index:1;width:170px;height:170px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(181,255,77,.4);background:linear-gradient(145deg,#24371b,#101711);box-shadow:0 0 70px rgba(181,255,77,.14);font-size:58px;font-weight:800;color:var(--green)}.floating{position:absolute;z-index:2;background:#111a14;border:1px solid var(--line);padding:12px 15px;border-radius:12px;color:#cbd5cc;font-size:12px;box-shadow:0 8px 25px rgba(0,0,0,.25)}.float1{top:55px;left:25px}.float2{bottom:55px;right:25px}.float3{bottom:22px;left:38px;color:var(--green)}
-section{padding:85px 0}.section-head{margin-bottom:36px}.section-head .eyebrow{margin-bottom:12px}.section-head h2{font-size:36px;letter-spacing:-1.5px;margin:0}.section-head p{color:var(--muted);line-height:1.7;max-width:620px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:linear-gradient(145deg,rgba(17,26,20,.96),rgba(10,14,11,.94));border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:25px;transition:.25s}.card:hover{border-color:rgba(181,255,77,.3);transform:translateY(-4px)}.card h3{margin:0 0 10px;font-size:19px}.card p{color:#a4b0a6;line-height:1.75;font-size:14px;margin:0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.tag{font-size:11px;color:var(--green);background:rgba(181,255,77,.07);border:1px solid rgba(181,255,77,.13);border-radius:99px;padding:7px 10px}.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skillbox{border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:19px;background:rgba(13,18,15,.75)}.skillbox h3{font-size:13px;color:var(--green);margin:0 0 12px}.skillbox p{color:#b0bbb2;font-size:13px;line-height:1.8;margin:0}.timeline{border-left:1px solid rgba(181,255,77,.3);padding-left:24px}.timeline-item{position:relative;padding:0 0 25px}.timeline-item:before{content:"";position:absolute;left:-30px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(181,255,77,.45)}.timeline-item h3{margin:0 0 6px}.timeline-item .meta{color:var(--green);font-size:12px;margin-bottom:10px}.timeline-item p,.timeline-item li{color:#a7b3aa;font-size:14px;line-height:1.75}.timeline-item ul{padding-left:18px;margin:8px 0}.cert-card{display:flex;gap:18px;align-items:flex-start}.cert-icon{width:46px;height:46px;border-radius:12px;background:rgba(181,255,77,.1);display:grid;place-items:center;color:var(--green);font-size:22px;flex-shrink:0}.contact-panel{border:1px solid var(--line);border-radius:20px;background:radial-gradient(ellipse at 80% 0%,rgba(181,255,77,.09),transparent 45%),#0d120f;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:24px}.contact-panel h2{font-size:32px;margin:0 0 10px;letter-spacing:-1px}.contact-panel p{color:var(--muted);line-height:1.7}.contact-links{display:flex;gap:10px;flex-wrap:wrap}.contact-links a{color:var(--green);text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:12px 14px;font-size:13px}.footer{border-top:1px solid rgba(255,255,255,.06);padding:24px 0;color:#748078;font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.fade{animation:fadein 1s ease both}@keyframes fadein{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:800px){nav{gap:14px}nav a{font-size:11px}.hero{grid-template-columns:1fr;gap:30px;padding-top:55px}.hero-card{min-height:330px}.grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.contact-panel{display:block}.contact-links{margin-top:22px}}
-@media(max-width:520px){.nav-inner{height:auto;min-height:68px;flex-wrap:wrap;padding:14px 0;gap:12px}nav{width:100%;justify-content:space-between}.hero h1{letter-spacing:-2.5px}.skills{grid-template-columns:1fr}.section-head h2{font-size:29px}.float1{left:12px;top:25px}.float2{right:12px;bottom:32px}.float3{left:12px;bottom:12px}}
+:root{
+  --bg:#080808;
+  --panel:#111113;
+  --orange:#f18a42;
+  --orange2:#ffb06c;
+  --muted:#aaa8ad;
+  --white:#f5f4f6;
+  --line:rgba(255,255,255,.12)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  overflow-x:hidden
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.24;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:54px 54px;
+  z-index:-3
+}
+.container{width:min(1380px,94%);margin:auto}
+.nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,8,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.09)
+}
+.nav-inner{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px
+}
+.logo{font-weight:800;letter-spacing:-.5px;font-size:20px}
+.logo span{color:var(--orange)}
+nav{display:flex;gap:30px}
+nav a{
+  color:#aaa8ad;
+  text-decoration:none;
+  font-size:15px;
+  transition:.2s
+}
+nav a:hover{color:var(--orange)}
+.pill{
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;
+  padding:12px 17px;
+  color:var(--white);
+  font-size:13px;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:.2s
+}
+.pill:hover{border-color:var(--orange);color:var(--orange)}
+.hero{
+  min-height:calc(100vh - 82px);
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  align-items:center;
+  gap:40px;
+  padding:40px 0 75px;
+  position:relative
+}
+.hero-copy{position:relative;z-index:2}
+.hero h1{
+  font-size:clamp(50px,6.3vw,94px);
+  line-height:1.03;
+  letter-spacing:-4.5px;
+  margin:18px 0 26px;
+  font-weight:800;
+  max-width:900px
+}
+.hero h1 .accent{
+  color:var(--orange);
+  font-family:Georgia,serif;
+  font-weight:500;
+  font-style:italic
+}
+.eyebrow{color:var(--muted);font-size:14px;letter-spacing:.5px}
+.hero p{max-width:760px;color:#b7b5ba;line-height:1.85;font-size:17px}
+.name-line{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin:30px 0 22px;
+  color:#b9b6bc;
+  font-weight:600
+}
+.name-line:before{content:"";height:2px;width:40px;background:var(--orange)}
+.name-line span{color:var(--orange)}
+.buttons{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.btn{
+  padding:15px 22px;
+  border-radius:9px;
+  font-weight:650;
+  font-size:14px;
+  text-decoration:none;
+  transition:.25s
+}
+.primary{background:var(--orange);color:#17110d}
+.secondary{border:1px solid rgba(255,255,255,.16);color:var(--white)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(241,138,66,.2)}
+.socials{display:flex;gap:24px;flex-wrap:wrap;margin-top:36px}
+.socials a{color:#aaa8ad;text-decoration:none;font-size:14px}
+.socials a:hover{color:var(--orange)}
+
+/* 3D ROTATING ORBIT BACKGROUND */
+.orbit-art{
+  position:fixed;
+  left:7vw;
+  top:8vh;
+  width:min(760px,70vw);
+  height:82vh;
+  pointer-events:none;
+  opacity:.72;
+  z-index:0;
+  overflow:visible;
+  perspective:1100px;
+  transform-style:preserve-3d;
+  filter:drop-shadow(0 0 18px rgba(241,138,66,.04))
+}
+.orbit{
+  position:absolute;
+  border:1px solid rgba(139,145,165,.24);
+  border-radius:50%;
+  width:550px;
+  height:550px;
+  left:70px;
+  top:55px;
+  transform-style:preserve-3d;
+  transform:rotateX(68deg) rotateY(18deg)
+    rotateZ(calc(-23deg + var(--scroll-angle, 0deg)));
+  animation:ringSpinA 26s linear infinite;
+  box-shadow:0 0 18px rgba(180,185,200,.025)
+}
+.orbit.o2{
+  width:670px;
+  height:400px;
+  left:10px;
+  top:150px;
+  transform:rotateX(48deg) rotateY(-32deg)
+    rotateZ(calc(19deg - var(--scroll-angle, 0deg)));
+  animation:ringSpinB 19s linear infinite reverse;
+  border-color:rgba(241,138,66,.42);
+  box-shadow:0 0 22px rgba(241,138,66,.07)
+}
+.orbit.o3{
+  width:450px;
+  height:700px;
+  left:140px;
+  top:-25px;
+  transform:rotateX(78deg) rotateY(46deg)
+    rotateZ(calc(53deg + var(--scroll-angle, 0deg)));
+  animation:ringSpinC 34s linear infinite;
+  border-color:rgba(170,170,185,.22)
+}
+.orbit.o4{
+  width:620px;
+  height:280px;
+  left:55px;
+  top:210px;
+  transform:rotateX(38deg) rotateY(66deg)
+    rotateZ(calc(-32deg - var(--scroll-angle, 0deg)));
+  animation:ringSpinD 22s linear infinite;
+  border-color:rgba(241,138,66,.3)
+}
+.orb{
+  position:absolute;
+  width:24px;
+  height:24px;
+  background:linear-gradient(145deg,#4a4b57,#17171d);
+  border:1px solid rgba(255,255,255,.08);
+  transform:rotate(35deg)
+}
+.orb.a{top:70px;left:585px;width:36px;height:36px}
+.orb.b{top:535px;left:85px;width:32px;height:32px}
+.orb.c{top:285px;left:605px;width:25px;height:25px}
+.orb.d{top:490px;left:470px;width:18px;height:18px}
+.orange-line{
+  position:absolute;
+  width:900px;
+  height:4px;
+  border-radius:50%;
+  background:linear-gradient(90deg,transparent,rgba(241,138,66,.3),#e88742,rgba(241,138,66,.12),transparent);
+  top:495px;
+  left:-45px;
+  transform:rotate(-13deg);
+  filter:blur(.2px)
+}
+.glow{
+  position:absolute;
+  width:360px;
+  height:360px;
+  background:rgba(241,138,66,.055);
+  filter:blur(75px);
+  border-radius:50%;
+  left:210px;
+  top:160px
+}
+.profile-panel{
+  position:relative;
+  z-index:2;
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-width:0
+}
+.photo-frame{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:10px;
+  background:rgba(255,255,255,.025);
+  min-height:450px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.photo-placeholder{
+  width:100%;
+  height:100%;
+  min-height:430px;
+  border-radius:12px;
+  background:
+    radial-gradient(circle at 50% 30%,rgba(241,138,66,.17),transparent 35%),
+    linear-gradient(145deg,#1a1715,#090909 65%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden
+}
+.photo-placeholder:before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  border:1px solid rgba(241,138,66,.18);
+  border-radius:50%;
+  box-shadow:0 0 0 55px rgba(241,138,66,.025),0 0 0 105px rgba(241,138,66,.02)
+}
+.initials{
+  position:relative;
+  font-size:clamp(70px,9vw,120px);
+  font-weight:800;
+  letter-spacing:-8px;
+  color:#eee;
+  z-index:1
+}
+.initial span{color:var(--orange)}
+.profile-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:17px 4px;
+  color:#aaa;
+  font-size:13px
+}
+.profile-meta strong{color:#f4f1ed;font-size:16px}
+.profile-meta .location{color:var(--orange)}
+section{padding:95px 0;position:relative;z-index:1}
+.section-head{margin-bottom:35px}
+.section-head .eyebrow{color:var(--orange);margin-bottom:12px}
+.section-head h2{font-size:40px;letter-spacing:-1.5px;margin:0}
+.section-head p{color:var(--muted);line-height:1.75;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{
+  background:linear-gradient(145deg,rgba(20,20,22,.96),rgba(12,12,13,.96));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:27px;
+  transition:.25s
+}
+.card:hover{border-color:rgba(241,138,66,.35);transform:translateY(-4px)}
+.card h3{margin:0 0 12px;font-size:20px}
+.card p{color:#b0adb4;line-height:1.8;font-size:14px;margin:0}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tag{
+  font-size:11px;
+  color:var(--orange2);
+  background:rgba(241,138,66,.06);
+  border:1px solid rgba(241,138,66,.16);
+  border-radius:99px;
+  padding:7px 10px
+}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skillbox{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  padding:21px;
+  background:rgba(16,16,18,.75)
+}
+.skillbox h3{font-size:14px;color:var(--orange);margin:0 0 12px}
+.skillbox p{color:#b2afb5;font-size:13px;line-height:1.8;margin:0}
+.timeline{border-left:1px solid rgba(241,138,66,.35);padding-left:25px}
+.timeline-item{position:relative;padding:0 0 26px}
+.timeline-item:before{
+  content:"";
+  position:absolute;
+  left:-31px;
+  top:4px;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--orange);
+  box-shadow:0 0 15px rgba(241,138,66,.45)
+}
+.timeline-item h3{margin:0 0 6px}
+.timeline-item .meta{color:var(--orange);font-size:13px;margin-bottom:10px}
+.timeline-item p,.timeline-item li{color:#b0adb4;font-size:14px;line-height:1.75}
+.timeline-item ul{padding-left:18px;margin:8px 0}
+.cert-card{display:flex;gap:18px;align-items:flex-start}
+.cert-icon{
+  width:46px;
+  height:46px;
+  border-radius:12px;
+  background:rgba(241,138,66,.1);
+  display:grid;
+  place-items:center;
+  color:var(--orange);
+  font-size:22px;
+  flex-shrink:0
+}
+.contact-panel{
+  border:1px solid rgba(241,138,66,.2);
+  border-radius:20px;
+  background:radial-gradient(ellipse at 80% 0%,rgba(241,138,66,.09),transparent 45%),#111;
+  padding:38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px
+}
+.contact-panel h2{font-size:34px;margin:0 0 10px;letter-spacing:-1px}
+.contact-panel p{color:var(--muted);line-height:1.7}
+.contact-links{display:flex;gap:10px;flex-wrap:wrap}
+.contact-links a{
+  color:var(--orange2);
+  text-decoration:none;
+  border:1px solid rgba(241,138,66,.22);
+  border-radius:9px;
+  padding:12px 14px;
+  font-size:13px
+}
+.footer{
+  border-top:1px solid rgba(255,255,255,.07);
+  padding:24px 0;
+  color:#777;
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap
+}
+.fade{animation:fadein 1s ease both}
+@keyframes fadein{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:900px){
+  nav{gap:16px}
+  .nav-inner{flex-wrap:wrap;padding:14px 0}
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:55px}
+  .profile-panel{max-width:540px}
+  .orbit-art{left:0;opacity:.6}
+  .grid{grid-template-columns:1fr}
+  .skills{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .nav-inner{gap:14px}
+  nav{width:100%;justify-content:space-between;gap:9px}
+  nav a{font-size:12px}
+  .hero h1{letter-spacing:-2.5px}
+  .skills{grid-template-columns:1fr}
+  .section-head h2{font-size:31px}
+  .contact-panel{display:block}
+  .contact-links{margin-top:22px}
+  .photo-frame{min-height:350px}
+  .photo-placeholder{min-height:330px}
+  .orbit-art{transform:scale(.72);transform-origin:top left}
+}
 </style>
 </head>
 <body>
-<header class="nav"><div class="container nav-inner"><div class="logo">SIVA<span>.</span>REDDY</div><nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Internship</a><a href="#contact">Contact</a></nav><a class="pill" href="#contact">Let's Connect ↗</a></div></header>
+
+<header class="nav">
+<div class="container nav-inner">
+<div class="logo">SIVA<span>.</span>REDDY</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="pill" href="#contact">Get in Touch</a>
+</div>
+</header>
+
 <main class="container">
-<section class="hero fade"><div><div class="eyebrow">Hello, I'm</div><h1>Siva Reddy<br><span>Data Analyst.</span></h1><p>Turning raw data into meaningful insights. I work with SQL, Python, Excel, and Power BI to explore data, uncover patterns, and build clear, interactive dashboards that support better decisions.</p><div class="buttons"><a class="btn primary" href="#projects">Explore My Work ↗</a><a class="btn secondary" href="#contact">Get In Touch</a></div></div><div class="hero-card"><div class="avatar">SR</div><div class="floating float1">📊 Data Analytics</div><div class="floating float2">⚡ Power BI · SQL</div><div class="floating float3">● Open to opportunities</div></div></section>
-<section id="about"><div class="section-head"><div class="eyebrow">A little about me</div><h2>About Me</h2></div><div class="card"><p>I'm a motivated aspiring Data Analyst and B.Tech graduate in Electrical & Electronics Engineering. I enjoy working with datasets, cleaning and transforming data, exploring trends, and presenting findings through dashboards and reports. I'm continuously developing my analytical skills and looking for an entry-level opportunity where I can contribute and grow.</p></div></section>
-<section id="skills"><div class="section-head"><div class="eyebrow">What I work with</div><h2>Technical Skills</h2><p>Tools and technologies I use across my data analytics workflow.</p></div><div class="skills"><div class="skillbox"><h3>Analytics</h3><p>Data Cleaning · Transformation · EDA · Data Visualization · Reporting</p></div><div class="skillbox"><h3>Programming & Querying</h3><p>SQL · Python</p></div><div class="skillbox"><h3>BI & Spreadsheet Tools</h3><p>Microsoft Excel · Power BI · Power Query · DAX</p></div><div class="skillbox"><h3>Python Libraries</h3><p>Pandas · NumPy · Matplotlib</p></div><div class="skillbox"><h3>Power BI</h3><p>Dashboard Development · KPI Reporting · Interactive Visuals · Filters</p></div><div class="skillbox"><h3>Strengths</h3><p>Analytical Thinking · Problem Solving · Attention to Detail · Teamwork · Adaptability</p></div></div></section>
-<section id="projects"><div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects</h2><p>Interactive dashboard projects focused on practical business insights.</p></div><div class="grid"><article class="card"><h3>Power BI HR Analytics Dashboard</h3><p>Built an interactive dashboard to explore employee and workforce data. Cleaned and transformed raw data with Power Query, created DAX measures and KPIs, and used charts, slicers, and filters to highlight workforce trends.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">HR Analytics</span></div></article><article class="card"><h3>Power BI Sales Analytics Dashboard</h3><p>Developed an interactive sales dashboard to analyze sales performance and business trends. Applied data cleaning and transformation, created KPI measures, and designed visualizations for reporting and decision-making.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">Sales Analytics</span></div></article></div></section>
-<section id="experience"><div class="section-head"><div class="eyebrow">Experience</div><h2>Internship</h2></div><div class="timeline"><div class="timeline-item"><h3>Data Analyst Intern — Unified Mentor Pvt. Ltd.</h3><div class="meta">3-Month Internship</div><ul><li>Analyzed datasets to identify trends, patterns, and meaningful business insights.</li><li>Worked with raw data and transformed it into structured information for analysis.</li><li>Created reports and data visualizations to communicate analytical insights.</li><li>Used Excel, Power BI, Power Query, DAX, SQL, and Python.</li></ul></div></div></section>
-<section id="certification"><div class="section-head"><div class="eyebrow">Learning & growth</div><h2>Certification</h2></div><div class="card cert-card"><div class="cert-icon">✦</div><div><h3>TATA Forage – Data Visualisation: Empowering Business With Effective Insights</h3><p>Completed practical business scenario tasks focused on data visualization and communicating insights. Learned to choose appropriate visualizations and present analytical findings effectively.</p></div></div></section>
-<section id="education"><div class="section-head"><div class="eyebrow">Academic background</div><h2>Education</h2></div><div class="card"><h3>B.Tech — Electrical & Electronics Engineering (EEE)</h3><p>RISE Krishna Sai Prakasam Group of Institutions · 2022–2026</p><div class="tags"><span class="tag">60%</span></div></div></section>
-<section id="contact"><div class="contact-panel"><div><div class="eyebrow">Have an opportunity?</div><h2>Let's connect.</h2><p>I'm open to entry-level Data Analyst opportunities and collaborations.</p></div><div class="contact-links"><a href="mailto:chinthamreddysivareddy565@gmail.com">Email ↗</a><a href="https://www.linkedin.com/in/siva-reddy-chimthamreddy-7615672ba/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
-<footer class="footer"><span>© 2026 Siva Reddy · Data Analyst Portfolio</span><span>Designed with a dark + neon green theme</span></footer>
+
+<section class="hero fade" id="home">
+
+<div class="orbit-art" aria-hidden="true">
+<div class="glow"></div>
+<div class="orbit"></div>
+<div class="orbit o2"></div>
+<div class="orbit o3"></div>
+<div class="orbit o4"></div>
+<div class="orange-line"></div>
+<div class="orb a"></div>
+<div class="orb b"></div>
+<div class="orb c"></div>
+<div class="orb d"></div>
+</div>
+
+<div class="hero-copy">
+<div class="eyebrow">Data Analytics · SQL · Power BI · Python</div>
+
+<h1>Turning data into<br>
+<span class="accent">meaningful insights.</span></h1>
+
+<div class="name-line">Siva <span>/ Data Analyst</span></div>
+
+<p>
+Aspiring Data Analyst with hands-on experience through a Data Analyst internship and projects.
+I work with Excel, SQL, Python, and Power BI to clean data, explore trends, and create visual dashboards that make information easier to understand.
+</p>
+
+<div class="buttons">
+<a class="btn primary" href="#projects">Explore Projects →</a>
+<a class="btn secondary" href="#contact">Download Resume</a>
+</div>
+
+<div class="socials">
+<a href="https://www.linkedin.com/in/siva-reddy-chimthamreddy-7615672ba/" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a href="https://github.com/chinthamreddysivareddy565-com" target="_blank" rel="noopener">GitHub ↗</a>
+<a href="mailto:chinthamreddysivareddy565@gmail.com">Email ↗</a>
+</div>
+</div>
+
+<div class="profile-panel">
+<div class="photo-frame">
+<div class="photo-placeholder">
+<div class="initials">S<span>R</span></div>
+</div>
+</div>
+<div class="profile-meta">
+<strong>Siva Reddy</strong>
+<span class="location">— India</span>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="section-head">
+<div class="eyebrow">About</div>
+<h2>A little about me</h2>
+</div>
+<div class="card">
+<p>
+I'm an aspiring Data Analyst and B.Tech graduate in Electrical & Electronics Engineering.
+I enjoy working with datasets, cleaning and transforming data, exploring trends,
+and presenting findings through dashboards and reports. I'm continuously developing
+my analytical skills and looking for an entry-level opportunity where I can contribute and grow.
+</p>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-head">
+<div class="eyebrow">Skills</div>
+<h2>Tools I work with</h2>
+<p>Technologies and tools across my data analytics workflow.</p>
+</div>
+<div class="skills">
+<div class="skillbox"><h3>Analytics</h3><p>Data Cleaning · Transformation · EDA · Data Visualization · Reporting</p></div>
+<div class="skillbox"><h3>Programming & Querying</h3><p>SQL · Python</p></div>
+<div class="skillbox"><h3>BI & Spreadsheet Tools</h3><p>Microsoft Excel · Power BI · Power Query · DAX</p></div>
+<div class="skillbox"><h3>Python Libraries</h3><p>Pandas · NumPy · Matplotlib</p></div>
+<div class="skillbox"><h3>Power BI</h3><p>Dashboard Development · KPI Reporting · Interactive Visuals · Filters</p></div>
+<div class="skillbox"><h3>Strengths</h3><p>Analytical Thinking · Problem Solving · Attention to Detail · Teamwork · Adaptability</p></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="section-head">
+<div class="eyebrow">Projects</div>
+<h2>Selected work</h2>
+<p>Dashboard projects focused on practical business insights.</p>
+</div>
+<div class="grid">
+<article class="card">
+<h3>Power BI HR Analytics Dashboard</h3>
+<p>
+Built an interactive dashboard to explore employee and workforce data.
+Cleaned and transformed raw data with Power Query, created DAX measures
+and KPIs, and used charts, slicers, and filters to highlight workforce trends.
+</p>
+<div class="tags">
+<span class="tag">Power BI</span><span class="tag">Power Query</span>
+<span class="tag">DAX</span><span class="tag">HR Analytics</span>
+</div>
+</article>
+
+<article class="card">
+<h3>Power BI Sales Analytics Dashboard</h3>
+<p>
+Developed an interactive sales dashboard to analyze sales performance and business trends.
+Applied data cleaning and transformation, created KPI measures, and designed
+visualizations for reporting and decision-making.
+</p>
+<div class="tags">
+<span class="tag">Power BI</span><span class="tag">Power Query</span>
+<span class="tag">DAX</span><span class="tag">Sales Analytics</span>
+</div>
+</article>
+</div>
+</section>
+
+<section id="experience">
+<div class="section-head">
+<div class="eyebrow">Experience</div>
+<h2>Data Analyst Internship</h2>
+</div>
+<div class="timeline">
+<div class="timeline-item">
+<h3>Data Analyst Intern — Unified Mentor Pvt. Ltd.</h3>
+<div class="meta">3-Month Internship</div>
+<ul>
+<li>Analyzed datasets to identify trends, patterns, and meaningful business insights.</li>
+<li>Worked with raw data and transformed it into structured information for analysis.</li>
+<li>Created reports and data visualizations to communicate analytical insights.</li>
+<li>Used Excel, Power BI, Power Query, DAX, SQL, and Python.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="certification">
+<div class="section-head">
+<div class="eyebrow">Learning & growth</div>
+<h2>Certification</h2>
+</div>
+<div class="card cert-card">
+<div class="cert-icon">✦</div>
+<div>
+<h3>TATA Forage – Data Visualisation: Empowering Business With Effective Insights</h3>
+<p>Completed practical business scenario tasks focused on data visualization and communicating insights. Learned to choose appropriate visualizations and present analytical findings effectively.</p>
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="section-head">
+<div class="eyebrow">Academic background</div>
+<h2>Education</h2>
+</div>
+<div class="card">
+<h3>B.Tech — Electrical & Electronics Engineering (EEE)</h3>
+<p>RISE Krishna Sai Prakasam Group of Institutions · 2022–2026</p>
+<div class="tags"><span class="tag">60%</span></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact-panel">
+<div>
+<div class="eyebrow">Have an opportunity?</div>
+<h2>Let's connect.</h2>
+<p>I'm open to entry-level Data Analyst opportunities and collaborations.</p>
+</div>
+<div class="contact-links">
+<a href="mailto:chinthamreddysivareddy@gmail.com">Email ↗</a>
+<a href="https://www.linkedin.com/in/siva-reddy-chimthamreddy-7615672ba/" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a href="https://github.com/chinthamreddysivareddy565-com" target="_blank" rel="noopener">GitHub ↗</a>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<span>© 2026 Siva Reddy · Data Analyst Portfolio</span>
+<span>Dark portfolio · Orange accent</span>
+</footer>
+
 </main>
-</body></html>
+
+<script>
+// Scroll adds an extra rotation angle to the 3D orbital background.
+(() => {
+  const art = document.querySelector('.orbit-art');
+  if (!art) return;
+  let ticking = false;
+  const updateScrollAngle = () => {
+    const angle = (window.scrollY * 0.22) % 360;
+    art.style.setProperty('--scroll-angle', angle + 'deg');
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateScrollAngle);
+      ticking = true;
+    }
+  }, { passive: true });
+  updateScrollAngle();
+})();
+</script>
+
+<style>
+@keyframes ringSpinA{
+  from{transform:rotateX(68deg) rotateY(18deg) rotateZ(calc(-23deg + var(--scroll-angle,0deg)))}
+  to{transform:rotateX(68deg) rotateY(18deg) rotateZ(calc(337deg + var(--scroll-angle,0deg)))}
+}
+@keyframes ringSpinB{
+  from{transform:rotateX(48deg) rotateY(-32deg) rotateZ(calc(19deg - var(--scroll-angle,0deg)))}
+  to{transform:rotateX(48deg) rotateY(-32deg) rotateZ(calc(-341deg - var(--scroll-angle,0deg)))}
+}
+@keyframes ringSpinC{
+  from{transform:rotateX(78deg) rotateY(46deg) rotateZ(calc(53deg + var(--scroll-angle,0deg)))}
+  to{transform:rotateX(78deg) rotateY(46deg) rotateZ(calc(413deg + var(--scroll-angle,0deg)))}
+}
+@keyframes ringSpinD{
+  from{transform:rotateX(38deg) rotateY(66deg) rotateZ(calc(-32deg - var(--scroll-angle,0deg)))}
+  to{transform:rotateX(38deg) rotateY(66deg) rotateZ(calc(328deg - var(--scroll-angle,0deg)))}
+}
+</style>
+</body>
+</html>
